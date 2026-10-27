@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="weather-card">
+        <h1>Weather Dashboard</h1>
+        <p class="subtitle">Check the weather in your city</p>
+        <button id="dark-mode-btn"> Dark Mode 🌙 </button>
+
+
+        <!-- City search -->
+        <div class="search-box">
+            <label for="city">Search</label>
+            <input type="text" id="city" placeholder="Search for a city">
+            <button id="search-btn">Search</button>
+            <button id="location-btn">Current Location</button>
+        </div>
+
+        <section class="weather-info">
+            <h2 id="cityName">Weather for --</h2>
+
+            <div class="temperature">
+                <span id="temperature">--</span> °C
+            </div>
+
+            <p class="condition">
+                Weather Condition: <span id="condition">--</span>
+            </p>
+
+            <!-- Weather details -->
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="detail-label">Humidity</span>
+                    <p><span id="humidity">--</span>%</p>
+                </div>
+
+                <div class="detail">
+                    <span class="detail-label">Wind Speed</span>
+                    <p><span id="windSpeed">--</span> m/s</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- 5-day forecast -->
+        <section
+            class = "forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast" class="forecast-container">
+                <p>Search for a city to view the 5-day forecast</p>
+            </div>
+        </section>
+
+        <p class="footer">Weather data powered by OpenWeather</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

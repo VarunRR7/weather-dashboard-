@@ -1,0 +1,227 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main dashboard card */
+.weather-card {
+    background-color: white;
+    border: none;
+    padding: 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Dashboard headings */
+.weather-card h1,
+.weather-card h2 {
+    color: #243b6b;
+    text-align: center;
+}
+
+.weather-card h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.weather-card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #778198;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* City search bar */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box label {
+    font-size: 14px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #cbd2e0;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #5269e8;
+}
+
+.search-box button {
+    background-color: #5269e8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #3e52c5;
+}
+
+/* Current temperature display */
+.temperature {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #293e73;
+    margin: 15px 0;
+}
+
+.condition {
+    text-align: center;
+    color: #69758b;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    overflow-wrap: anywhere;
+}
+
+/* Humidity and wind speed panels */
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.detail {
+    background-color: #f2f5ff;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.detail-label {
+    color: #778198;
+    font-size: 13px;
+}
+
+.detail p {
+    color: #293e73;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Dashboard footer */
+.footer {
+    text-align: center;
+    color: #929bad;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 400px) {
+    .search-box {
+        gap: 6px;
+    }
+
+    .search-box label {
+        font-size: 12px;
+    }
+
+    .search-box button {
+        padding: 10px;
+    }
+}
+
+
+/* 5-day forecast */
+.forecast-section {
+    margin-top: 25px;
+}
+
+.forecast-section h2 {
+    text-align: center;
+    color: #243b6b;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.forecast-card {
+    background-color: #f2f5ff;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.forecast-card img {
+    width: 60px;
+    height: 60px;
+}
+
+.forecast-card p {
+    margin: 6px 0;
+}
+
+
+/* Dark mode */
+body.dark-mode {
+    background: #121826;
+}
+
+.dark-mode .weather-card {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+.dark-mode .weather-card h1,
+.dark-mode .weather-card h2,
+.dark-mode .temperature,
+.dark-mode .detail p {
+    color: #f1f5f9;
+}
+
+.dark-mode .subtitle,
+.dark-mode .condition,
+.dark-mode .detail-label,
+.dark-mode .footer {
+    color: #cbd5e1;
+}
+
+.dark-mode .detail,
+.dark-mode .forecast-card {
+    background-color: #334155;
+    color: #f1f5f9;
+}
+
+#dark-mode-btn {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
