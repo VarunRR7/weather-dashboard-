@@ -13,7 +13,7 @@ let darkModeBtn = document.getElementById("dark-mode-btn");
 
 
 // Replace this with your regenerated OpenWeather API key
-let API_KEY = "4228b6b640d7098a87200d3cd73e4319";
+let API_KEY = "939cc1f3bff5d14f03107e270560cb28";
 
 // Get the 5-day weather forecast
 function getForecast(city) {
